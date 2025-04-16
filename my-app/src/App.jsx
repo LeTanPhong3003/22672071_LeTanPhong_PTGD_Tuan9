@@ -10,6 +10,8 @@ import ToggleThemeBasic from "./component/ToggleThemeBasic";
 import ToggleThemeRedux from "./component/ToggleThemeRedux";
 import ShoppingCartBasic from "./component/ShoppingCartBasic";
 import ShoppingCartRedux from "./component/ShoppingCartRedux";
+import AuthBasic from "./component/AuthBasic";
+import AuthRedux from "./component/AuthRedux";
 
 const App = () => {
   return (
@@ -32,6 +34,10 @@ const App = () => {
         <ShoppingCartBasic />
         <hr />
         <ShoppingCartRedux />
+        <hr />
+        <AuthBasic />
+        <hr />
+        <AuthRedux />
       </div>
     </Provider>
   );
