@@ -31,10 +31,4 @@ const calculatorSlice = createSlice({
 
 // Export actions
 export const { increment, decrement } = calculatorSlice.actions;
-
-// Tạo store
-export const store = configureStore({
-  reducer: {
-    calculator: calculatorSlice.reducer,
-  },
-});
+export default calculatorSlice.reducer;
