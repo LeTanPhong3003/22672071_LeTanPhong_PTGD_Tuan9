@@ -1,13 +1,14 @@
-import { useState } from 'react'
-import './index.css'
-import Calculator from './component/Calculator'
+import React from "react";
+import { Provider } from "react-redux";
+import { store } from "./redux/Store";
+import Calculator from "./component/Calculator";
 
-function App() {
+const App = () => {
   return (
-    <div>
+    <Provider store={store}>
       <Calculator />
-    </div>
-  )
-}
+    </Provider>
+  );
+};
 
-export default App
+export default App;

@@ -1,26 +1,17 @@
-import React, { useReducer } from "react";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
-// Khởi tạo reducer
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "ADD":
-      return { value: state.value + action.payload };
-    case "SUBTRACT":
-      return { value: state.value - action.payload };
-    default:
-      return state;
-  }
-};
-
-// Component Calculator
 const Calculator = () => {
-  // Khởi tạo state và dispatch
-  const [state, dispatch] = useReducer(reducer, { value: 0 });
+  // Lấy state từ Redux store
+  const value = useSelector((state) => state.value);
+
+  // Tạo dispatch để gửi action
+  const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
       <h1 className="text-3xl font-bold mb-4">Calculator</h1>
-      <h2 className="text-2xl font-semibold mb-6">Result: {state.value}</h2>
+      <h2 className="text-2xl font-semibold mb-6">Result: {value}</h2>
       <div className="flex space-x-4">
         <button
           onClick={() => dispatch({ type: "ADD", payload: 1 })}
