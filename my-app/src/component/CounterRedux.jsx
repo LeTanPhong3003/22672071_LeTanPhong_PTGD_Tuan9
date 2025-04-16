@@ -2,13 +2,13 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../redux/counterSlice";
 
-const Counter = () => {
+const CounterRedux = () => {
   const count = useSelector((state) => state.counter.count);
   const dispatch = useDispatch();
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-gray-800 mb-4">Counter</h1>
+      <h1 className="text-4xl font-bold text-gray-800 mb-4">Counter (Redux)</h1>
       <div className="text-2xl font-semibold text-blue-600 mb-6">
         Current Count: {count}
       </div>
@@ -30,4 +30,4 @@ const Counter = () => {
   );
 };
 
-export default Counter;
+export default CounterRedux;
