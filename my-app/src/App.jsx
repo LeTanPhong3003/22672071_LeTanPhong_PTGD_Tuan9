@@ -8,6 +8,8 @@ import TodoListBasic from "./component/TodoListBasic";
 import TodoListRedux from "./component/TodoListRedux";
 import ToggleThemeBasic from "./component/ToggleThemeBasic";
 import ToggleThemeRedux from "./component/ToggleThemeRedux";
+import ShoppingCartBasic from "./component/ShoppingCartBasic";
+import ShoppingCartRedux from "./component/ShoppingCartRedux";
 
 const App = () => {
   return (
@@ -26,6 +28,10 @@ const App = () => {
         <ToggleThemeBasic />
         <hr />
         <ToggleThemeRedux />
+        <hr />
+        <ShoppingCartBasic />
+        <hr />
+        <ShoppingCartRedux />
       </div>
     </Provider>
   );
